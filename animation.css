@@ -1,0 +1,202 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.sky,.road,.grass{
+    position: relative;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+.sky{
+    background-color: skyblue;
+    height: 55%;
+}
+@keyframes movingcloud-1{
+    /* 0%{
+        transform: translateX(1px);
+        top: 5%;
+        bottom: 5%;
+        opacity: 5%;
+    }
+    10%{
+        transform: translateX(50px);
+        top: 20%;
+        bottom: 20%;
+        opacity: 10%;
+    }
+    20%{
+        transform: translateX(150px);
+        top: 20%;
+        bottom: 20%;
+        opacity: 20%;
+    }
+    30%{
+        transform: translateX(300px);
+        top: 20%;
+        bottom: 20%;
+        opacity: 30%;
+    }
+    40%{
+        transform: translateX(450px);
+        top: 20%;
+        bottom: 20%;
+        opacity: 40%;
+    }
+    50%{
+        transform: translateX(600px);
+        top: 20%;
+        bottom: 20%;
+        opacity: 50%;
+    }
+    60%{
+        transform: translateX(800px);
+        top: 20%;
+        bottom: 20%;
+        opacity: 60%;
+    }
+    70%{
+        transform: translateX(1000px);
+        top: 20%;
+        bottom: 20%;
+        opacity: 70%;
+    }
+    80%{
+        transform: translateX(1100px);
+        top: 20%;
+        bottom: 20%;
+        opacity: 80%;
+    }
+    90%{
+        transform: translateX(1250px);
+        top: 20%;
+        bottom: 20%;
+        opacity: 90%;
+    }
+    100%{
+        transform: translateX(1350px);
+        top: 20%;
+        bottom: 20%;
+        opacity: 100%;
+    } */
+
+    from{
+        transform: translateX(0px) scale(1);
+        opacity: 10%;
+    }
+    to{
+        transform: translateX(1350px) scale(3);
+        opacity: 100%;
+    }
+}
+
+.cloud-1{
+    top: 20%;
+    bottom: 20%;
+    height: 30%;
+    position: absolute;
+    /* opacity:100%; */
+    animation-name: movingcloud-1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+.cloud-2{
+    top: 10%;
+    bottom: 20%;
+    height: 40%;
+    position: absolute;
+    animation-name: movingcloud-2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+.birdflying{
+    top: 30%;
+    height: 40%;
+    position: absolute;
+    animation-name: flyingbird;
+    animation-duration: 15s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+.grass{
+    height: 15%;
+    width: 100%;
+    background-color: green;
+}
+.road{
+    height: 30%;
+    width: 100%;
+    background-color: dimgray;
+    border-top: 10px solid gray;
+    border-bottom: 10px solid gray;
+}
+
+.divider{
+    width: 100%;
+    border: 4px dashed white;
+    position: absolute;
+    top: 50%;
+}
+
+.car1,.car2{
+    height:65% ;
+    position: absolute;
+   
+}
+
+.car1{
+    bottom: 50%;
+    animation-name: movecar1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: ease-in; */
+    animation-timing-function: ease-out; 
+}
+.car2{
+    top:35%;
+    animation-name: movecar2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* -webkit-animation-delay: 2s; */
+    /* animation-direction: alternate-reverse; */
+}
+
+@keyframes movecar1{
+    from{transform: translateX(0px);}
+    to{transform: translateX(1350px);}
+}
+@keyframes movecar2{
+    from{transform: translateX(0px);}
+    to{transform: translateX(1350px);}
+}
+@keyframes movingcloud-2{
+    from{
+        transform: translateX(1350px);
+        opacity: 50%;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 100%;
+    }
+}
+@keyframes flyingbird{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(1350px)
+    }
+}
